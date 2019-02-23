@@ -27,6 +27,7 @@ v0idcache works at 1337bank.money which is also the url to the site. It is presu
 twitter handle - @v0idcache I was able to find her twitter account through just social media searching 
 
 email v0idcache@protonmail.com - this was found on the actual website 1337bank.money
+Most of this was just found from either googling or techniques from intel techniques as I was just trying to see if any public social media sites had any information on the user 
 
 4. List any ( >= 1 ) IP addresses associated with the website. For each, detail the location of the server, any history in DNS, and how you discovered this information.
 There are 3 main ips
@@ -40,6 +41,7 @@ There are 3 main ips
 I was able to find a flag located in the html 
 <!-- Good find! CMSC389R-{h1dd3n_1n_plain_5ight} --> 
 the second was in the robots.txt file -Congrats! Flag is: CMSC389R-{h1ding_fil3s_in_r0bots_L0L}
+For these I just followed examples in the slides as I guessed that easter eggs from the slides would be used as problems in the hw
 
 6. What ports are open on the website? What services are running behind these ports? How did you discover this?
 
@@ -51,37 +53,67 @@ ports open that I found were
 These ports were found using nmap and scanning each port individually. Another flag in nmap allowed for me to see what os and services that were running on each open port.
 
 7. Which operating system is running on the server that is hosting the website? How did you discover this?
-I was able to find out that the server is running linux. I was able to find this through a flag (-A) in nmap that shows what os the server was running
+I was able to find out that the server is running linux. I was able to find this through a flag (-A) in nmap that shows what os the server was running.
 
 8. **BONUS:** Did you find any other flags on your OSINT mission? (Up to 9 pts!)
-cmsc389r- {YWX4H3d3Bz6dx9lG320dv0JZH} - AB3400.txt I found this flag after I was able to get into the server from my brute force attack
-
-CMSC389R-{h0w_2_iNt0_DNS_r3c0Rd5}- after finding more information on a dns information website(dnsdumpster) I found multiple ips, their locations and this flag text
+cmsc389r- {YWX4H3d3Bz6dx9lG320dv0JZH} - AB3400.txt I found this flag after I was able to get into the server from my brute force attack. The exact file name I was able to find from a pastebin site detailing messages from v0idcache and fl1nch. The pastebin was found just by googling v0idcache.
+CMSC389R-{h0w_2_iNt0_DNS_r3c0Rd5}- after finding more information on a dns information website(dnsdumpster) I found multiple ips, their locations and this flag text at the bottom. This was done when I was trying to find the ip so I could nmap and find vulnerable ports
+CMSC389R-{h1d3_s3cret_g1ts}- I found an exposed git repository using nmap and was able to download the last commit messge using 1337bank.money/.git/COMMIT_EDITMSG. I was surprised as I didn't think nmap was supposed to find git repositories or that git repositories could be vulnerable but the nmap gave me the http address and that downloaded a file which showed me the flag.
 
 
 ### Part 2
 
-Use the provided python stub code [('stub.py')](stub.py) or write your own program in another language to gain access to `v0idcache`'s server via an open port that you should have found in Part 1.
+I was able to brute force my way into the server using a very simple method. We had the wordlist which made things a lot easier as we didn't have to guess each letter individually of the password. Therefore it was simple just to iterate through the list until we got to the correct password. I made the code continue until one of the password attempts output something other than Fail although it took me a while to realize that it was outputting Fail with a newline. Still after I found out the password I found the flag in /home/flag.txt although I originally checked usr. But home is usually where the files for the user are located. I was also able to locate the AB3400.txt in /home/files/AB3400.txt.
+THe flag was cmsc389r-{brut3_f0rce_m4aster}
 
-Once you have gained access to `v0idcache`'s account with the correct login credentials, you will have access to a system shell.
+####### the git flag###############
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Wed Feb 6 22:14:25 2019 -0500
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   __pycache__/__init__.cpython-37.pyc
+#	new file:   __pycache__/app.cpython-37.pyc
+#	new file:   app.py
+#	new file:   requirements.txt
+#	new file:   static/bootstrap.min.css
+#	new file:   static/bootstrap.min.js
+#	new file:   static/hackerbank.jpg
+#	new file:   static/image (2).png
+#	new file:   static/investment.jpg
+#	new file:   static/matrix.png
+#	new file:   static/product.css
+#	new file:   static/secure-bank-account.jpg
+#	new file:   static/style.css
+#	new file:   templates/404.html
+#	new file:   templates/about.html
+#	new file:   templates/auth/login.html
+#	new file:   templates/auth/register.html
+#	new file:   templates/base.html
+#	new file:   templates/index.html
+#	new file:   templates/login_flag.html
+#	new file:   templates/robots.txt
+#	new file:   templates/secret.txt
+#	new file:   templates/user.html
+#	new file:   user.py
+#
+# Changes not staged for commit:
+#	modified:   __pycache__/app.cpython-37.pyc
+#	modified:   app.py
+#	modified:   templates/404.html
+#	modified:   templates/about.html
+#	modified:   templates/auth/login.html
+#	modified:   templates/index.html
+#	modified:   templates/secret.txt
+#
+# Untracked files:
+#	.DS_Store
+#	static/anonymity.jpeg
+#
 
-Use your knowledge of Linux and OSINT techniques to locate the flag file and submit its contents for points.
 
-Your response here should briefly document how you approached and solved this part of the assignment. You should also push your bruteforce program to the "week/2/writeup" folder of your GitHub repository.
-
-Note: If you choose to write your own program in another language, please include instructions on how to execute your program, including what version of the language you are using. You will **NOT** receive credit if the TAs cannot run your program.
-
-If you are stuck on this part of the assignment, let us know! The facilitator staff is here to help and teach, and we are open to releasing hints as time goes on!
-
-### Format
-In the "week/2/writeup" directory of our repository there is a README.md file for you to edit and submit your homework in. Use this as a template and directly edit it with your answers. Complete your bruteforce program in this directory as well. When you've finished the assignment, push it up to your personal GitHub for us to grade.
-
-Your responses to every prompt in this assignment should include answers to any specific questions along with a brief explanation of your thought process and how you obtained the answer.
-
-### Scoring
-
-Part 1 is worth 45 points, and part 2 is worth 55 points.
-
-### Tips
-
-Reference the slides from lecture 2 to help you effectively utilize available OSINT techniques.
