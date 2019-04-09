@@ -62,7 +62,7 @@ This practical, hands-on [1-credit course](http://sticsumd.com/) provides studen
 ## Grading
 Assignments should be submitted through your personal fork of our class repository. Instructions on how to set this up and do it can be found [here](guides/git_instructions.md).
 
-Grades will be released through ELMS.
+Grades will be released through [ELMS](https://myelms.umd.edu/courses/1261976).
 
 You are responsible for all material discussed in lecture and posted on the class repository, including announcements, deadlines, policies, etc.
 
@@ -72,7 +72,7 @@ Your final course grade will be determined according to the following percentage
 | ------------- | -----|-------- |
 | 55% | Write-ups  | Weekly individual write-ups (250-500 words) that summarize and explain your solutions to the assigned CTF challenges or concepts covered in lecture. |
 | 20% | Midterm | Examination on topics covered until Forensics II. |
-| 25% | Final Hack | Demonstrate mastery of all topics learned and apply knowledge to change your grade on the class's private grade server. The grade earned will be determined by levels unlocked in the grade server and will be applied to your official final grade. 
+| 25% | Final Hack | Demonstrate mastery of all topics learned and apply knowledge to change your grade on the class's private grade server. The grade earned will be determined by levels unlocked in the grade server and will be applied to your official final grade.
 
 Any request for reconsideration of any grading on coursework must be submitted within 36 hours  of when it is returned. No requests will be considered afterwards.
 
@@ -83,15 +83,15 @@ Assignments may be submitted up to 3 days late for a 10%/day penalty.
 | Week | Topic | Assignment |
 | ----|----|----- |
 | 1 (2/1) | [Introduction + Ethics](lectures/1_Intro+Ethics.pdf) | [Writeup 1](assignments/1_Ethics/), Download [VirtualBox](https://www.virtualbox.org/), [Kali](https://www.kali.org/), [Gray Hat Hacking (Ch. 1)](https://archive.org/details/GrayHatHackingTheEthicalHackersHandbook3rdEdition), [OSINT Handbook](https://www.i-intelligence.eu/wp-content/uploads/2016/11/2016_November_Open-Source-Intelligence-Tools-and-Resources-Handbook.pdf)
-| 2 (2/8) |[OSINT](lectures/) | [Writeup 2](assignments/), [Kali VM installation instructions](guides/kali_instructions.pdf)|
-| 3 (2/15) | [OPSEC, Vulnerability scanning, Social Engineering](lectures/) | [Writeup 3](assignments/) |
-| 4 (2/22) | [Penetration Testing](lectures/) | [Writeup 4](assignments/) |
+| 2 (2/8) |[OSINT](lectures/) | [Writeup 2](assignments/2_OSINT/), [Kali VM installation instructions](guides/kali_instructions.pdf)|
+| 3 (2/15) | [OPSEC, Vulnerability scanning, Social Engineering](lectures/) | [Writeup 3](assignments/3_OPSEC_SE) |
+| 4 (2/22) | [Penetration Testing](lectures/) | [Writeup 4](assignments/4_Pentesting_I) |
 | 5 (3/1) | [Forensics I](lectures/) | [Writeup 5](assignments/) |
-| 6 (3/8) | [Forensics II](lectures/) | [Writeup 6](assignments/) |
+| 6 (3/8) | [Forensics II](lectures/6_Forensics_II) | [Writeup 6](assignments/) |
 | 7 (3/15) | Midterm | |
 | 9 (3/22) | Spring Break | |
-| 10 (3/29) | [Binaries I](lectures/) | [Writeup 8](assignments/) |
-| 10 (4/5) | [Binaries II](lectures/) | [Writeup 9](assignments/) |
+| 10 (3/29) | [Forensics II](https://github.com/UMD-CS-STICs/389Rspring19/blob/master/lectures/6_Forensics_II.pdf) | [Writeup 6](assignments/6_Forensics_II) |
+| 10 (4/5) | [Binaries I](lectures/) | [Writeup 9](assignments/) |
 | 11 (4/12) | [Cryptography I](lectures/) | [Writeup 10](assignments/) |
 | 12 (4/19) | [Cryptography II](lectures/) | [Writeup 11](assignments/) |
 | 13 (4/26) | [Web I](lectures/) | [Writeup 7](assignments/) |
