@@ -28,4 +28,18 @@ Digital acknowledgement: *Joon Park*
 7) The hackers were able to get very easy access to the server as the rockyou.txt password hasn't been changed. Having better security through better passwords is one way we could have prevented this attack.
 ### Part 2 (55 Pts)
 
-*Replace this text with your repsonse to our prompt for part 2!*
+2 i) greetz.fpff was generated on 2019-03-27 04:15:05
+  ii) it was authored by fl1nch
+  iii) there were 5 sections with the flag in section 4
+       1 - stype: 0x1
+	  	 value: hey you, keep looking :)
+	  2 - stype: 0x6
+	  	 value: 52.336035 4.880673
+	  3 - stype: 0x8
+	  	 value:
+	  4 - stype: 0x1
+	  	 value: }R983CSMC_perg_tndid_u0y_yllufep0h{-R983CSMC
+	  5 - stype: 0x1
+	  	 value: 'Q01TQzM4OVIte2hleV9oM3lfeTBVX3lvdV9JX2RvbnRfbGlrZV95b3VyX2Jhc2U2NF9lbmNvZGluZ30=
+
+	iv) the flag was in section 4 }R983CSMC_perg_tndid_u0y_yllufep0h{-R983CSMC
